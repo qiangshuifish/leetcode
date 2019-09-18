@@ -59,8 +59,35 @@ public class LengthOfLongestSubstring {
         // 1. 两个循环递归出字符串所有的子字符串
         // 2. 判断每个子字符串是不是重复的字符串
         // 3. 记录非重复字符串的最大长度
-        String str = "pwwkew";
-        int i = lengthOfLongestSubstring(str);
-        System.out.println(i);
+        String str = "1234a3";
+//        int i = lengthOfLongestSubstring(str);
+//        System.out.println(i);
+
+        // 滑动法 思路
+        // 1.使用一个Set来存储字符，把字符从头到尾遍历一遍,
+        // 2.把所以第一次出现的字符都放入set里头
+        // 3.直到出现第一个重复字符时，删掉第一个字符,来模拟字符串的滑动
+        // 4.比如 1234a323wd4 当遇到第二个 3 时， 删除第一个 1 变成 234a
+        int i1 = lengthOfLongestSubstring_01(str);
+        System.out.println(i1);
     }
+
+    public static int lengthOfLongestSubstring_01(String str) {
+        int strLength = str.length();
+        List<Character> set = new ArrayList<>();
+        int ans = 0, i = 0, j = 0;
+        while (i < strLength && j < strLength) {
+            // try to extend the range [i, j]
+            if (!set.contains(str.charAt(j))){
+                set.add(str.charAt(j++));
+                System.out.println(set);
+                ans = Math.max(ans, j - i);
+            }else {
+                set.remove(Character.valueOf(str.charAt(i++)));
+                System.out.println("删除后："+set);
+            }
+        }
+        return ans;
+    }
+
 }
