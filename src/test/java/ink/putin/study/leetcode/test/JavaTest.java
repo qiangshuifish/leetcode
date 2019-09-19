@@ -1,5 +1,10 @@
 package ink.putin.study.leetcode.test;
 
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author 呛水滴鱼
  * @version 1.0
@@ -25,4 +30,11 @@ public class JavaTest {
             }
         }
     }
+
+
+    @Test
+    public void  test(){
+    }
+
+
 }
