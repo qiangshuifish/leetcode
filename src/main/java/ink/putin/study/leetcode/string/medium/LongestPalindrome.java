@@ -1,4 +1,4 @@
-package ink.putin.study.leetcode.string;
+package ink.putin.study.leetcode.string.medium;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ink.putin.study.leetcode.string;
+package ink.putin.study.leetcode.string.easy;
 
 import java.util.HashMap;
 import java.util.Map;
