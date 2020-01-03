@@ -1,10 +1,5 @@
 package ink.putin.study.leetcode.string.easy;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * <p>反转字符串</p>
  *
