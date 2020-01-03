@@ -43,6 +43,7 @@ public class AddStrings {
             }else{
                 num2LastChar = '0';
             }
+            // 先装字符串，不然不会是数字相加
             int sum = Integer.valueOf(String.valueOf(num1LastChar)) + Integer.valueOf(String.valueOf(num2LastChar)) + temp;
             // 这里需要等于，因为等于10进一位
             if(sum >= 10){
