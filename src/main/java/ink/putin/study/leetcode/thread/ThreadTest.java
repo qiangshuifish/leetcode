@@ -1,4 +1,4 @@
-package ink.putin.study.leetcode.test;
+package ink.putin.study.leetcode.thread;
 
 /**
  * @author 呛水滴鱼
