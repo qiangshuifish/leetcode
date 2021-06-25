@@ -7,6 +7,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 import java.util.Collections;
 import java.util.Properties;
+import java.util.concurrent.Executors;
 
 public class MyConsumer {
     private static KafkaConsumer<String, String> consumer;

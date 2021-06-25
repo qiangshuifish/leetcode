@@ -9,7 +9,8 @@ package ink.putin.study.leetcode.thread;
  */
 public class CommandReorder {
 
-    private static int a,b,x,y;
+    volatile
+    private static  int a,b,x,y;
 
     public static void main(String[] args) throws InterruptedException {
 
