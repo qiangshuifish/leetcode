@@ -11,6 +11,7 @@ public class ThreeMaximumProduct {
         int[] nums = new int[]{-1,-20,-10,1,2,3,4};
         Arrays.sort(nums);
         int length = nums.length;
-        System.out.println(Math.max(nums[length - 1]*nums[length - 2]*nums[length - 3],nums[0]*nums[1]*nums[length - 1]));
+        final int max = Math.max(nums[length - 1] * nums[length - 2] * nums[length - 3], nums[0] * nums[1] * nums[length - 1]);
+        System.out.println(max);
     }
 }

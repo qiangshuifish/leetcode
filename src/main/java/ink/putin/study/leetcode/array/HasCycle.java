@@ -40,9 +40,11 @@ public class HasCycle {
 
 
     public static boolean hasCycle(ListNode head) {
+        // 节点为空，或者单个节点
         if(head == null || head.next == null){
             return false;
         }
+        // 两个节点不循环，三个节点不循环
         if(head.next == head || head.next.next == head){
             return true;
         }

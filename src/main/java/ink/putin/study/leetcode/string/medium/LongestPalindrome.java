@@ -38,19 +38,14 @@ public class LongestPalindrome {
     }
 
     private static String longestPalindrome(String str) {
-        if(str.length() <= 1){
-            return str;
-        }
-        int strLength = str.length();
-        List<Character> charList = new ArrayList<>(strLength);
-        String maxStr = "";
-        for (int i = 0; i < strLength; i++) {
-            if(!charList.contains(str.charAt(i))){
-                charList.add(str.charAt(i));
-            }else{
-                int reptIndex = charList.indexOf(str.charAt(i));
-                String substring = str.substring(reptIndex, i+1);
-                maxStr = maxStr.length() >= substring.length()?maxStr:substring;
+        boolean[][] dp = new boolean[str.length()][str.length()];
+        String maxStr = null;
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if(str.charAt(i) == str.charAt(j) && (i -j <=2 || str.charAt(i-1) == str.charAt(j + 1) )){
+                    String substring = str.substring(j, i + 1);
+                    maxStr = substring.length() > maxStr.length() ? substring : maxStr;
+                }
             }
         }
         return maxStr;
