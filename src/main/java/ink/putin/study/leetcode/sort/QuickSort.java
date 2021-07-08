@@ -1,6 +1,9 @@
 package ink.putin.study.leetcode.sort;
 
+import org.apache.commons.lang3.RandomUtils;
+
 import java.util.Arrays;
+import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -48,7 +51,10 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {3, 2, 5, 1, 4};
+        int[] arr = new int[5];
+        for (int i = 0; i < 5; i++) {
+            arr[i] = RandomUtils.nextInt(1,10);
+        }
         System.out.println(Arrays.toString(arr));
         System.out.println();
         quickSort(arr, 0, arr.length - 1);
